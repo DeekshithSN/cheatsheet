@@ -3,26 +3,26 @@
 
 ## Docker basic commands:
 
-docker info —>info about how many containers,images e.t.c
-docker <mngmt commands><sub-commands><options> —>docker command format , older way is docker <command><options> ((both works)
-docker container run --publish 80:80 --detach nginx —> to start container in background
-docker container ls. —> list of containers(use -a to list all containers)
-docker container stop {container_id} -> to stop a container
-docker container logs {containerName} to see the logs
-docker container top {container Name) —> list the processes running in docker container
-docker container rm -f(to forcibly remove a container even if it is running)
-docker container inspect — details and configuration of a container
-docker container stats — live performance statistics of a container
-docker container update --help —> Update configuration of one or more containers even if they are running
+- docker info —>info about how many containers,images e.t.c
+- docker <mngmt commands><sub-commands><options> —>docker command format , older way is - -docker <command><options> ((both works)
+- docker container run --publish 80:80 --detach nginx —> to start container in background
+- docker container ls. —> list of containers(use -a to list all containers)
+- docker container stop {container_id} -> to stop a container
+- docker container logs {containerName} to see the logs
+- docker container top {container Name) —> list the processes running in docker container
+- docker container rm -f(to forcibly remove a container even if it is running)
+- docker container inspect — details and configuration of a container
+- docker container stats — live performance statistics of a container
+- docker container update --help —> Update configuration of one or more containers even if they are running
 
 ## Docker shell commands:
 
-docker container run -it —> start new container interactively
-docker container run exec -it —> run additional commands inside container (exec runs only inside a cotainer which is already started)
-docker container run --rm -it --name ununtu ubuntu:14.04 bash(to run bash command at the time of container creation, exec works only on already running/stopped containers)
-docker container run -it --name nginx nginx bash -> to run bash shell without SSH
-docker container start -ai {containerName} —> to start container in shell mode if it is stopped
-docker container exec -it {containerId} bash—>Run a command in a running container —> when we exit from this shell, container wont stop bcz exec will start additional process and it wont effect existing one
+- docker container run -it —> start new container interactively
+- docker container run exec -it —> run additional commands inside container (exec runs only inside a cotainer which is already started)
+- docker container run --rm -it --name ununtu ubuntu:14.04 bash(to run bash command at the time of container creation, exec works only on already running/stopped containers)
+- docker container run -it --name nginx nginx bash -> to run bash shell without SSH
+- docker container start -ai {containerName} —> to start container in shell mode if it is stopped
+- docker container exec -it {containerId} bash—>Run a command in a running container —> when we exit from this shell, container wont stop bcz exec will start additional process and it wont effect existing one
 
 ## Docker Networking:
 
