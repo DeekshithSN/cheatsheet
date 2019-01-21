@@ -1,7 +1,7 @@
 
 
 
-##Docker basic commands:
+## Docker basic commands:
 
 docker info —>info about how many containers,images e.t.c
 docker <mngmt commands><sub-commands><options> —>docker command format , older way is docker <command><options> ((both works)
@@ -15,7 +15,7 @@ docker container inspect — details and configuration of a container
 docker container stats — live performance statistics of a container
 docker container update --help —> Update configuration of one or more containers even if they are running
 
-##Docker shell commands:
+## Docker shell commands:
 
 docker container run -it —> start new container interactively
 docker container run exec -it —> run additional commands inside container (exec runs only inside a cotainer which is already started)
@@ -24,7 +24,7 @@ docker container run -it --name nginx nginx bash -> to run bash shell without SS
 docker container start -ai {containerName} —> to start container in shell mode if it is stopped
 docker container exec -it {containerId} bash—>Run a command in a running container —> when we exit from this shell, container wont stop bcz exec will start additional process and it wont effect existing one
 
-##Docker Networking:
+## Docker Networking:
 
 - docker container port {container} —> to get the port number on which we are mapping the traffic
 - docker container inspect --format '{{ .NetworkSettings.IPAddress }}' {conainerId} —> to get IP address of a container
@@ -34,14 +34,14 @@ docker container exec -it {containerId} bash—>Run a command in a running conta
 - docker container run -p 81:80 --name nginx2 --network {networkName} -d nginx (to create with specific network}
 - docker network connect {netwrokId} {containerId}, use disconnect in place of connect to disconnect from a network
 
-##Docker networkd:DNS
+## Docker networkd:DNS
 
 - docker exec -it {containerName} ping {anotherContainer}— using this we can ping another a container from other container(prerequistie: they both should be in same network) using built in DNS network
 - docker container run --network-alias search --net test -d elasticsearch:2 —> to create a container with DNS alias(—network-alias) and with network test
 - docker container run --rm --net test alpine nslookup search —> it will search for nslookup DNS entry “search” inside that n/w
 - If we run “docker container run --rm --net test centos curl -s search:9200” it will give different different outputs between two DNS servers
 
-##Docker Images:
+## Docker Images:
 
 - docker image history {image_name} —> will list the changes in a image..not changes in container, whatver we do a change on a image it will create a new layer
 - docker image inspect nginx —> returns the metadata of that image
@@ -49,11 +49,11 @@ docker container exec -it {containerId} bash—>Run a command in a running conta
 - cat ~/.docker/config.json —this file will have all the credentials(In Mac it will store in keychain)
 - docker image push {imageName} —> to push to docker hub after login using “docker login” command
 
-##DockerFIle:
+## DockerFIle:
 
 - docker image build -t customnginx .
 
-##Docker Volumes:
+## Docker Volumes:
 
 - docker volume prune —> to cleanup unused volumes
 - docker image inspect mysql
@@ -62,11 +62,11 @@ docker container exec -it {containerId} bash—>Run a command in a running conta
 - docker container run -d --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=True -v mysql-db:/var/lib/mysql mysql(named volume)
 - docker volume create —> required to do this before “docker run” to use custom drivers and labels
 
-##Bind Mount:
+## Bind Mount:
 
 - docker container run -d --name nginx -p 80:80 -v $(pwd):/usr/share/nginx/html nginx —> mounting a directory
 
-##Docker Compose:
+## Docker Compose:
 
 - docker-compose up —> to start (use docker-compose -d to start the service in background)
 - docker-compose down —> to stop
@@ -75,7 +75,7 @@ docker container exec -it {containerId} bash—>Run a command in a running conta
 - docker-compose down -v —> to remove named volumes
 - docker-compose down —rmi —> Iyt will remove the image at the time of removing compose
 
-##Docker Swarm:
+## Docker Swarm:
 
 - “docker info” command output, we can see whether Swarm is acive or not. By default it will be inactive.
 - docker swarm init —> to initilize docker swarm
@@ -88,7 +88,7 @@ docker container exec -it {containerId} bash—>Run a command in a running conta
 - docker service update --help(it will have more options compared to docker container update --help)..using this we can do more things like scaling containers and changing conf etc.
 - docker service rm {serviceName}—> It will also deletes the containers which r started through this service
 
-##Swarm with 3 nodes:
+## Swarm with 3 nodes:
 
 - docker-machine(using https://labs.play-with-docker.com/p/bd25oqe08n7000d50rl0#bd25oqe0_bd25p4gabk8g008i6k8g)
 - use “docker swarm init --advertise-addr 192.168.-63” to initlize the swarm where —advertise-ipaddr is the one which is accebile ,ABove command O/P will have the command for joining swarm, copy that and paste it in other nodes to join them,We cant run docker swarm command in the sub nodes, we need to run from manager to promote nodes
@@ -97,7 +97,7 @@ docker container exec -it {containerId} bash—>Run a command in a running conta
 - docker service create --replicas 3 alpine ping 8.8.8.8 —> to create with 3 replicas
 - Now try docker service ls or node ls or service ps
 
-##Overlay Multi-Host networking example:
+## Overlay Multi-Host networking example:
 
 Run below commands in 3 node cluster in play-with-docker.com
 
@@ -105,15 +105,15 @@ Run below commands in 3 node cluster in play-with-docker.com
 - docker service create --name postgres --network mydrupal -e POSTGRES_PASSWORD=mypass postgres(to create a service with custom
 - docker service create --name drupal -p 80:80 --network mydrupal drupal, After running these commands you can access the application in all the nodes
 
-##swarm-app-1 assignment:
+## swarm-app-1 assignment:
 - docker service create --name vote --replicas 2 -p 80:80 --network frontend
 
-##Docker stack:
+## Docker stack:
 
 - docker stack deploy -c example-voting-app-stack.yml voteapp where “example-voting-app-stack.yml” is yaml file and voteapp is name of the stack, use the same command if you make any changes to the yml file, it will take new ones
 - check docker stack —help for more options
 
-##Swarm Secrets:
+## Swarm Secrets:
 
 - docker secret create psql_user psql_user.txt —> to create a new secret “psql_user”, you should have a file with name psql_user.txt already
 - echo "myDBpAssWORD" | docker secret create psql_pass - -> second way, here we are passing via CLI using “-“ at last
@@ -122,7 +122,7 @@ Run below commands in 3 node cluster in play-with-docker.com
 - docker service update --secret-rm. —> to remove the secret
 - docker stack deploy -c docker-compose.yml mydb —> for stack
 
-##Full App Lifecycle With Compose:
+## Full App Lifecycle With Compose:
 - docker-compose up -d
 - docker-compose -f docker-compose.yml -f docker-compose.test.yml up where “docker-compose.yml” is default file, “docker-compose.test.yml” is override file for CI env, it will recreate the containers with the new compose file eventhough containers are running with the command in 1st point
 - use docker inspect {containerName} to see the config
@@ -135,12 +135,12 @@ Docker service update:
 - docker service update --publish-rm 8088 --publish-add 9090:80 web
 - docker service update --force web —> like restarting even though there are no changes, so that if there is increase in nodes, the load will get distributed equally
 
-##Docker healthcheck:
+## Docker healthcheck:
 
 - docker container run --name p2 -d --health-cmd="pg_isreay -U postgres || exit 1" postgres:9.6 where “pg_isreay -U postgres || exit 1” is the healthcheck command for postgres and now we can see healthcech in status in docker container ls comand, it will be in default starting stage for 30 sec. We can see this healthcheck in docker inspect command
 - docker service create --name postgres2 --health-cmd="pg_isready -U postgres || exit 0" postgres , it will be in starting stage for 30 sec, then only it will go to running state
 
-##Docker System:
+## Docker System:
 
 - docker system df —> will tell you the space used by images,container,local volumes
 - docker system prune —> will remove all the things except the running container and its volumes.
