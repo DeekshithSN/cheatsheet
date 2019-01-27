@@ -8,6 +8,11 @@ _A list of my commonly used Git commands_
 https://github.com/DeekshithSN/cheatsheet/blob/master/.bash_profile*
 
 --
+### To Delete files from staging server 
+
+| Command | Description |
+| ------- | ----------- |
+| `git rm --cached [file_name]` | To delete file from staging server but not from local |
 
 ### Getting & Creating Projects
 
