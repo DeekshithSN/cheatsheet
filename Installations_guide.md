@@ -74,7 +74,7 @@
 ````
 If you face below problem which is same as mentione below the you can refer this link
 
-"https://stackoverflow.com/questions/25183063/docker-on-rhel-6-cgroup-mounting-failing "
+https://stackoverflow.com/questions/25183063/docker-on-rhel-6-cgroup-mounting-failing
 
 Starting cgconfig service: Error: cannot create directory /cgroup/blkio
 /sbin/cgconfigparser; error loading /etc/cgconfig.conf: Cgroup, operation not allowed
