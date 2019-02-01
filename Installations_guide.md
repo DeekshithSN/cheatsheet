@@ -42,4 +42,16 @@
  
  ## Jenkins installation in Centos
  
- - 
+ - wget https://updates.jenkins-ci.org/download/war/2.162/jenkins.war 
+ - java -jar jenkins.war --httpPort=5000
+ 
+ 
+ ## Upgrading Centos java from 1.7 to 1.8 in centos
+ - sudo yum install java-1.8.0
+ - sudo yum remove java-1.7.0-openjdk
+ - to Verify: java -version 
+   
+   refere link for more details https://serverfault.com/questions/664643/how-can-i-upgrade-to-java-1-8-on-an-amazon-linux-server 
+   
+ ## Installation 
+ 
