@@ -80,4 +80,15 @@
       /sbin/cgconfigparser; error loading /etc/cgconfig.conf: Cgroup, operation not allowed
       Failed to parse /etc/cgconfig.conf                         [FAILED]
 
- 
+       After doing this you need run all the commands with sudo concatenated to it.
+
+      - To solve this issue we need to add current user to docker group , to do the same follow the below commands 
+        sudo groupadd docker
+        sudo usermod -aG docker $USER ( got a error while runing docker commands with the current user)
+        sudo usermod -aG docker jenkins (got a error while runing docker commands with jenkins user )
+        getent group <groupname> (to check the list of users in particular group)
+        sudo passwd jenkins to change password of jenkins user
+        
+      - even after following the above commands if you face any issue in ruuning commands then run below command
+        chmod 777 /var/run/docker.sock
+
