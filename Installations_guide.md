@@ -53,5 +53,29 @@
    
    refere link for more details https://serverfault.com/questions/664643/how-can-i-upgrade-to-java-1-8-on-an-amazon-linux-server 
    
- ## Installation 
+ ## Installation of Docker 
+ 
+- yum update -y 
+- sudo yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine
+- sudo yum install -y yum-utils \
+  device-mapper-persistent-data \
+  lvm2
+- sudo yum install docker -y
+- service docker start 
+- service docker status 
+
+`````
+If you face below problem which is same as mentione below the you can refer this link "https://stackoverflow.com/questions/25183063/docker-on-rhel-6-cgroup-mounting-failing "
+
+Starting cgconfig service: Error: cannot create directory /cgroup/blkio
+/sbin/cgconfigparser; error loading /etc/cgconfig.conf: Cgroup, operation not allowed
+Failed to parse /etc/cgconfig.conf                         [FAILED]
+````
  
