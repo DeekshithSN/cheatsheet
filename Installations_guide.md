@@ -96,5 +96,16 @@
 - yum update -y
 - yum install nginx
 - service nginx start
+
+## Tomcat installation in Centos
+
+- yum install -y tomcat7
+- which tomcat7
+- service tomcat7 start
+- cd /usr/share/tomcat7/
+- cd webapps/
+- netstat -tulnp ( To check ports is listning ports )
+   
+   
 ## Installation of Ansible 
 - 
