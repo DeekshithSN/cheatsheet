@@ -92,5 +92,9 @@
       - even after following the above commands if you face any issue in ruuning commands then run below command
         chmod 777 /var/run/docker.sock
         
+## Installation of Nginx in centos 
+- yum update -y
+- yum install nginx
+- service nginx start
 ## Installation of Ansible 
 - 
