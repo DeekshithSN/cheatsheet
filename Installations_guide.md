@@ -53,7 +53,7 @@
    
    refere link for more details https://serverfault.com/questions/664643/how-can-i-upgrade-to-java-1-8-on-an-amazon-linux-server 
    
- ## Installation of Docker 
+ ## Installation of Docker in centos
  
 - yum update -y 
 - sudo yum remove docker \
@@ -107,5 +107,10 @@
 - netstat -tulnp ( To check ports is listning ports )
    
    
-## Installation of Ansible 
-- 
+## Installation of Ansible in centos
+
+- yum upadate -y
+- pip install ansible
+
+
+
