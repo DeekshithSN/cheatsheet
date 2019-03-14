@@ -110,7 +110,7 @@
 ## Installation of Ansible in centos
 
 - yum upadate -y
-- pip install ansible
+- sudo pip install ansible
 
 
 
