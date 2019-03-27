@@ -5,7 +5,7 @@ Assume you have requirment that need to save your docker image as .tar file belo
 - docker save -o fedora-all.tar fedora 
 
 ## Docker load
-if you want load .tar file as 
+if you want load .tar file as docker image 
 - docker load -i file_name.tar
 
 ## copy the files to running container 
@@ -44,7 +44,9 @@ copying the file to\from the running container
                 run echo "$a"
    by using above command we will be able to send arguments as launch arguments 
    
-- docker build --compress .
+- docker build --compress . <br />
   Assume your build context is in GB , if you want to compress and send to docker demon then we need to use above command.
-
-- docker 
+   
+   --force-rm		  --> Always remove intermediate containers <br />
+   --quiet , -q		  --> Suppress the build output and print image ID on success <br />
+   --rm	true	          --> Remove intermediate containers after a successful build <br />
