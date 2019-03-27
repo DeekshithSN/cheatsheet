@@ -30,8 +30,8 @@ copying the file to\from the running container
  
 - docker build --no-cache .  <br />
          Assume you dont want to use intermediate layers which are there in build cache , then we need to use the above coammand  <br /> 
- this helps when build dockerfile once in a while  <br />
-          senario :- assume your dockerfile has RUN yum install git when you ran one year ago it installed 2.17.1 but when you run this command again as this layer already exists it wont install the latest version.  <br />
+ this helps when we build dockerfile once in a while  <br />
+          senario :- assume your dockerfile has RUN yum install git when you ran one year ago it installed git 2.17.1 but when you run this command again as this layer already exists it wont install the latest version.  <br />
         So if we use --no-cache it will try build also with new layer 
         
  - docker build . --build-arg a=5
