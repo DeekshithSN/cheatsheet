@@ -106,6 +106,8 @@
 - cd webapps/
 - netstat -tulnp ( To check ports is listning ports )
    
+   Tomcat8 - sudo yum install tomcat8 tomcat8-webapps
+             chkconfig tomcat8 on 
    
 ## Installation of Ansible in centos
 
