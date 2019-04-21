@@ -1,8 +1,8 @@
 ## Installation of httpd
-yum install httpd  -y
-service httpd start
-chkconfig httpd on
-cd /var/www/html/
+- yum install httpd  -y
+- service httpd start
+- chkconfig httpd on
+- cd /var/www/html/
 
 ## Terraform installation in Centos
 
