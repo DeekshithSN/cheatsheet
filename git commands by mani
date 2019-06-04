@@ -1,0 +1,8 @@
+git config --global --edit  -----Open the global configuration file in a text editor for manual editing.
+git reflog.                 ------It give detailed information about the log changes in the local
+git reflog --relative-date  ------flag to show date
+git reflog --all            ------ show all refs
+git commit --amend.         ------ replace the previous commit with the new commit(Replace the last commit with the staged changes and last commit combined)
+git log -p                  ------  Display the full diff of each commit.
+git log --author= ”<authorname>” -----Search for commits by a particular author
+git diff --cached.  --------------- if u are in staging area then by this command we can see the difference from staging to workspace
