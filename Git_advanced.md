@@ -102,4 +102,4 @@
         if you want commits in oneline then the command will be git log --oneline
    
 ## submodules 
-- 
+   [For mor information](https://www.vogella.com/tutorials/GitSubmodules/article.html#cloning-a-repository-that-contains-submodules)
