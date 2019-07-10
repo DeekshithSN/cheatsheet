@@ -1,0 +1,13 @@
+ 1  yum repolist
+    2  yum install epel-release
+    3  wget http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+    4  yum install wget -y
+    5  wget http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+    6  rpm -ivh epel-release-latest-7.noarch.rpm
+    7  yum install ansible -y
+    8  useradd ansible
+    9  passwd ansible
+   10  visudo
+   11  vi /etc/ssh/sshd_config
+   12  service sshd restart
+   13  history
