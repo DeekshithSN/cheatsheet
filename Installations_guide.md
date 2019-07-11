@@ -33,6 +33,8 @@
 - source /etc/profile.d/maven.sh
 - To confirm: mvn --version
 
+   compiler issue in aws instance refer https://forums.aws.amazon.com/thread.jspa?messageID=455613
+
    refer link for more details https://www.tecmint.com/install-apache-maven-on-centos-7/ 
    
  ## Gradle installation in Centos
