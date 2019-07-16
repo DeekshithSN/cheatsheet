@@ -122,5 +122,12 @@
 - yum upadate -y
 - sudo pip install ansible
 
+## Installation of Jfrog Artifactory 
+
+- wget https://bintray.com/jfrog/artifactory/download_file?file_path=jfrog-artifactory-oss-6.11.1.zip
+- unzip download_file?file_path=jfrog-artifactory-oss-6.11.1.zip 
+- you will get artifactory-oss-6.11.1 , goto bin folder inside artifactory-oss-6.11.1 and run ``sh artifactory.sh``
+- 
+
 
 
