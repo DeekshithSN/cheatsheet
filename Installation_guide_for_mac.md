@@ -11,11 +11,11 @@ You will be guided through running and accessing a Kubernetes cluster on your lo
 ### kubectl
 ### Installation Guide
 
-The only pre-requisite for this guide is that you have Homebrew installed. Homebrew is a package manager for the Mac. You’ll also need Homebrew Cask, which you can install after Homebrew by running brew tap caskroom/cask in your Terminal.
+- The only pre-requisite for this guide is that you have Homebrew installed. Homebrew is a package manager for the Mac. You’ll also need Homebrew Cask, which you can install after Homebrew by running brew tap caskroom/cask in your Terminal.
 
-Install Docker for Mac. Docker is used to create, manage, and run our containers. It lets us construct containers that will run in Kubernetes Pods.
+- Install Docker for Mac. Docker is used to create, manage, and run our containers. It lets us construct containers that will run in Kubernetes Pods.
 
-Install VirtualBox for Mac using Homebrew. Run brew cask install virtualbox in your Terminal. VirtualBox lets you run virtual machines on your Mac (like running Windows inside macOS, except for a Kubernetes cluster.)
+- Install VirtualBox for Mac using Homebrew. Run brew cask install virtualbox in your Terminal. VirtualBox lets you run virtual machines on your Mac (like running Windows inside macOS, except for a Kubernetes cluster.)
 
 Skip to step three if everything has worked to this point.
 
@@ -31,9 +31,9 @@ Kill each of these in turn by running kill first_column_number (first_column_num
 
 Now re-run brew cask reinstall virtualbox and it should succeed.
 
-Install kubectl for Mac. This is the command-line interface that lets you interact with Kuberentes. Run brew install kubectl in your Terminal.
+- Install kubectl for Mac. This is the command-line interface that lets you interact with Kuberentes. Run brew install kubectl in your Terminal.
 
-Install Minikube via the Installation > OSX instructions from the latest release. At the time of writing, this meant running the following command in Terminal…
+- Install Minikube via the Installation > OSX instructions from the latest release. At the time of writing, this meant running the following command in Terminal…
 
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.27.0/minikube-darwin-amd64 &&\
       chmod +x minikube &&\
