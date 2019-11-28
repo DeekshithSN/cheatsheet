@@ -119,7 +119,7 @@
    
 ## Installation of Ansible in centos
 
-- yum upadate -y
+- yum update -y
 - sudo pip install ansible
 
 ## Installation of Jfrog Artifactory 
