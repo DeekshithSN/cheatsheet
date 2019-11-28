@@ -122,6 +122,8 @@
 - yum update -y
 - sudo pip install ansible
 
+https://medium.com/@khandelwal12nidhi/ansible-setup-on-aws-ec2-instance-d83fac41fcc8
+
 ## Installation of Jfrog Artifactory 
 
 - wget https://bintray.com/jfrog/artifactory/download_file?file_path=jfrog-artifactory-oss-6.11.1.zip
