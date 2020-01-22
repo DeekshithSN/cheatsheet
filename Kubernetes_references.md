@@ -1,8 +1,8 @@
 
 # kubernetes 
 
-## pod
-   ## pod is a object which encapsulates or groups one or more containers (such as Docker containers), with shared storage/network, and a specification for how to run the containers.
+## Pod
+   ### pod is a object which encapsulates or groups one or more containers (such as Docker containers), with shared storage/network, and a specification for how to run the containers.
    
  - command to list the pods 
  
