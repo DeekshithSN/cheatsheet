@@ -4,6 +4,19 @@
 ## Pod
    ### pod is a object which encapsulates or groups one or more containers (such as Docker containers), with shared storage/network, and a specification for how to run the containers.
    
+   below is the basic structure of pod 
+   
+      apiVersion: v1
+      kind: Pod
+      metadata:
+        name: my-first-app
+        labels:
+          type: front-end
+      spec:
+        conatiners:
+          - name: busybox
+            image: busybox
+   
  - command to list the pods 
  
        kubectl get pods
