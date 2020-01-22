@@ -45,6 +45,11 @@
  
        kubectl logs pod_name -c conatiner_name_inside_pod   ( container name inside pod you will get it by kubectl describe pod command ) 
        
-
+ - let's say you have created pod using kubectl run command and now you want to change small configuration of pod then you can use below command
+ 
+         kubectl edit pod pod_name ( it will open a vi editor , so you can change and save it back then you no need apply 
+         it back kubernetes will automatically updates the pod )
+         
+         
        
  
