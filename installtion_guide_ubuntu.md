@@ -217,3 +217,15 @@ Then to verify use below commands
  - kubectl get nodes
  - kubectl get pods
  - Kubectl get service
+ 
+ ## Nexus Installation in ubuntu 16.04
+
+ - apt-get install wget ( install if you dont have wget )
+ - java -version ( make sure java is installed which should be java 8 or higher version )
+ - wget https://download.sonatype.com/nexus/3/latest-unix.tar.gz 
+ - tar -xvf latest-unix.tar.gz  
+ - cd nexus-3.22.0-02/ 
+ - ./nexus start ( starts the nexus artifactory )
+ - ./nexus status ( by this you check the status of nexus artifactory )
+ 
+  ``` intial password will be present in /opt/sonatype-work/nexus3/admin.password ```
