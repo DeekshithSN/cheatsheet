@@ -227,5 +227,6 @@ Then to verify use below commands
  - cd nexus-3.22.0-02/ 
  - ./nexus start ( starts the nexus artifactory )
  - ./nexus status ( by this you check the status of nexus artifactory )
+ - To access this use http://ip_Address:8081 ( by deafault which will be running on 8081)
  
   ``` intial password will be present in /opt/sonatype-work/nexus3/admin.password ```
