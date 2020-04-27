@@ -230,3 +230,13 @@ Then to verify use below commands
  - To access this use http://ip_Address:8081 ( by deafault which will be running on 8081)
  
   ``` intial password will be present in /opt/sonatype-work/nexus3/admin.password ```
+  
+ ## Helm Installation in ubuntu 16.04
+ 
+ - curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+ - chmod 700 get_helm.sh 
+ - ./get_helm.sh
+ 
+ 	### helm uninstallation 
+	- which helm ( to see which folder its installed )
+	- rm -rf /usr/local/bin/helm
