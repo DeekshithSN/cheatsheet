@@ -53,6 +53,7 @@ for more details - https://tecadmin.net/install-oracle-java-11-on-ubuntu-16-04-x
  - sudo apt-get update
  - sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+ - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
  - sudo apt-key fingerprint 0EBFCD88
  - sudo apt-get update
  - sudo apt-get install docker-ce docker-ce-cli containerd.io ( to install latest version )
