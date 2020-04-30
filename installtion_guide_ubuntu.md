@@ -202,12 +202,10 @@ after executing this command you will get node's joining command, copy and paste
  - export KUBECONFIG=/etc/kubernetes/admin.conf
  - mkdir -p $HOME/.kube
  - sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
- - sudo chown $(id -u):$(id -g) $HOME/.kube/configmkdir -p $HOME/.kube
+ - sudo chown $(id -u):$(id -g) $HOME/.kube/config;mkdir -p $HOME/.kube
  - sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
- - kubectl apply -f https://docs.projectcalico.org/v3.3/getting-started/kubernetes/installation/hosted/canal/rb
-ac.yaml
- - kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/2140ac876ef134e0ed5af15c65e414cf26827915/D
-ocumentation/kube-flannel.yml
+ - kubectl apply -f https://docs.projectcalico.org/v3.3/getting-started/kubernetes/installation/hosted/canal/rbac.yaml
+ - kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/2140ac876ef134e0ed5af15c65e414cf26827915/Documentation/kube-flannel.yml
 
 Execute join command in node, which may look like as mentioned below 
 
