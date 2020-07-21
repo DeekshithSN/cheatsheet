@@ -7,7 +7,7 @@ _A list of my commonly used Git commands_
 *If you are interested in my Git aliases, have a look at my `.bash_profile`, found here: 
 https://github.com/DeekshithSN/cheatsheet/blob/master/.bash_profile*
 
---
+
 ### To Delete files from staging server 
 
 | Command | Description |
