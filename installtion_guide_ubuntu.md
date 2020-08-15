@@ -47,6 +47,8 @@ for more details - https://tecadmin.net/install-oracle-java-11-on-ubuntu-16-04-x
  
  For more details https://tecadmin.net/install-apache-maven-on-ubuntu/ 
  
+ easy way to install - sudo apt install maven
+ 
    
  ## Docker installation in ubuntu 16.04
  
