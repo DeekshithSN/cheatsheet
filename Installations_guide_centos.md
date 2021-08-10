@@ -80,6 +80,7 @@
    
    ### We can use below start script for Jenkin on Centos7/RHEL7.
    - vi /etc/systemd/system/jenkins.service
+   
       [Unit]
       Description=Jenkins Service
       ;Requires=httpd.service
