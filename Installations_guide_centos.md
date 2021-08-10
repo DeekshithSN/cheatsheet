@@ -78,6 +78,26 @@
    - firewall-cmd --reload
    - firewall-cmd --list-ports
    
+   ### We can use below start script for Jenkin on Centos7/RHEL7.
+   - vi /etc/systemd/system/jenkins.service
+      ```
+      [Unit] 
+      Description=Jenkins Service ;
+      Requires=httpd.service 
+      Wants=network.target network-online.target 
+      After=network.target network-online.target
+      
+      [Service] 
+      ExecStart=/usr/bin/java -jar /home/ppatel/myproject/tools/jenkins/jenkins.war --httpPort=5000 
+      User=ppatel 
+      Group=ppatel
+
+      [Install] WantedBy=multi-user.target 
+      ;Alias=jenkins.service
+      ```
+   - systemctl daemon-reload
+   - systemctl start jenkins
+   - systemctl status jenkins
  
  ## Upgrading Centos java from 1.7 to 1.8 in centos
  - sudo yum install java-1.8.0
