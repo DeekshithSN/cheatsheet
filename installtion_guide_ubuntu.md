@@ -1,3 +1,6 @@
+## JAVA 8 installation in ubuntu 16.04
+
+- sudo apt-get -y install default-jdk
 
 
 ## JAVA 11 installation in ubuntu 16.04
