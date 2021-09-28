@@ -1,0 +1,25 @@
+  3  apt update
+    4  sudo apt -y upgrade && sudo systemctl reboot
+    5  sudo apt update
+    6  sudo apt -y install curl apt-transport-https
+    7  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+    8  OS="xUbuntu_20.04"
+    9  VERSION=1.22
+   10  echo "deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/$OS/ /" > /etc/apt/sources.list.d/dev
+el:kubic:libcontainers:stable.list
+   11  echo "deb http://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable:/cri-o:/$VERSION/$OS/ /" > /etc/apt/so
+urces.list.d/devel:kubic:libcontainers:stable:cri-o:$VERSION.list
+   12  curl -L https://download.opensuse.org/repositories/devel:kubic:libcontainers:stable:cri-o:$VERSION/$OS/Release.key | apt-key a
+dd -
+   13  curl -L https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/$OS/Release.key | apt-key add -
+   14  $ lsmod | grep br_netfilter
+   15  sudo systemctl enable kubelet
+   16  sudo kubeadm config images pull
+   17  kubeadm init
+   18  mkdir -p $HOME/.kube
+   19  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+   20  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+   21  kubectl get nodes
+   22  kubectl cluster-info
+   23  kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+   24  kubectl get nodes
