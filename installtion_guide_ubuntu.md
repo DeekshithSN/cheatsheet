@@ -176,6 +176,12 @@ Use the following command to monitor the SonarQube log.
 
 for more deatils refer - https://techexpert.tips/sonarqube/sonarqube-installation-ubuntu-linux/
 
+#### you want to create sonarqube through docker then use below command 
+
+```
+docker run -d -p 9000:9000 sonarqube:lts
+```
+
 ## JFROG Artifactory installation in ubuntu 16.04 using docker container 
 
  - export JFROG_HOME= /set/some/path
