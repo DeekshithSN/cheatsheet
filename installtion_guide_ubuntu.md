@@ -13,6 +13,10 @@
 
 for more details - https://tecadmin.net/install-oracle-java-11-on-ubuntu-16-04-xenial/
 
+#### Java 11 installtion in GCP machine 
+
+  - sudo apt-get install oracle-java11-installer-local
+
 
 ## git installation in ubuntu 16.04
  
