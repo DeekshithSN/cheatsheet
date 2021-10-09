@@ -46,7 +46,6 @@ for more details - https://tecadmin.net/install-oracle-java-11-on-ubuntu-16-04-x
  
  -  cd /usr/local
  - wget https://downloads.apache.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
- - sudo tar apache-maven-3.6.3-bin.tar.gz 
  - sudo tar xvf apache-maven-3.6.3-bin.tar.gz 
  - ln -s apache-maven-3.6.3 apache-maven
  - sudo vi /etc/profile.d/apache-maven.sh
