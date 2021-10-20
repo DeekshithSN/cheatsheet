@@ -248,7 +248,7 @@ Then to verify use below commands
  - java -version ( make sure java is installed which should be java 8 or higher version )
  - wget https://download.sonatype.com/nexus/3/latest-unix.tar.gz 
  - tar -xvf latest-unix.tar.gz  
- - cd nexus-3.22.0-02/ 
+ - cd nexus-3.35.0-02/bin
  - ./nexus start ( starts the nexus artifactory )
  - ./nexus status ( by this you check the status of nexus artifactory )
  - To access this use http://ip_Address:8081 ( by deafault which will be running on 8081)
