@@ -2,6 +2,11 @@
 
 - sudo apt-get -y install default-jdk
 
+## Java 11 ( open JDK )
+- sudo add-apt-repository ppa:openjdk-r/ppa
+- sudo apt-get update
+- sudo apt install openjdk-11-jdk
+
 
 ## JAVA 11 installation in ubuntu 16.04
 
