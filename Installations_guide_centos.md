@@ -63,7 +63,7 @@
    
  ## Installation of Docker in centos
  
-- yum update -y 
+- sudo yum update -y 
 - sudo yum remove docker \
                   docker-client \
                   docker-client-latest \
