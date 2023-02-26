@@ -444,8 +444,13 @@ kubeadm join k8s-cluster.computingforgeeks.com:6443 --token sr4l2l.2kvot0pfalh5o
  ### Install network plugin on Master
 
 In this we’ll use Calico. You can choose any other supported network plugins.
+
 ```
-kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+curl https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/calico.yaml -O
+kubectl apply -f calico.yaml
+```
+```
+kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml --> might not work 
 ```
 
 ### Issues 
