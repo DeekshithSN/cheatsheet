@@ -447,3 +447,18 @@ In this we’ll use Calico. You can choose any other supported network plugins.
 ```
 kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
 ```
+
+### Issues 
+
+problem:
+```
+[init] Using Kubernetes version: v1.26.1
+[preflight] Running pre-flight checks
+error execution phase preflight: [preflight] Some fatal errors occurred:
+        [ERROR CRI]: container runtime is not running: output: time="2023-02-26T16:02:00Z" level=fatal msg="validate service connection: CRI v1 runtime API is not implemented for endpoint \"unix:///var/run/containerd/containerd.sock\": rpc error: code = Unimplemented desc = unknown service runtime.v1.RuntimeService"
+, error: exit status 1
+[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`
+To see the stack trace of this error execute with --v=5 or higher
+
+```
+sol: https://programmerall.com/article/99842435629/
