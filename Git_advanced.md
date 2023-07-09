@@ -103,3 +103,5 @@
    
 ## submodules 
    [For mor information](https://www.vogella.com/tutorials/GitSubmodules/article.html#cloning-a-repository-that-contains-submodules)
+
+git clone --recursive 
